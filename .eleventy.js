@@ -1,10 +1,15 @@
 const Image = require('@11ty/eleventy-img');
 
-async function imageShortcode(src, alt, sizes) {
-    let metadata = await Image(src, {
+function imageShortcode(src, alt, sizes) {
+    let options = {
         widths: [300, 600],
-        formats: ['avif', 'jpeg', 'png'],
-    });
+        formats: ['png'],
+        outputDir: './public/assets/',
+        urlPath: '/assets/',
+    };
+
+    // generate images, while this is async we don’t wait
+    Image(src, options);
 
     let imageAttributes = {
         alt,
@@ -12,8 +17,8 @@ async function imageShortcode(src, alt, sizes) {
         loading: 'lazy',
         decoding: 'async',
     };
-
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    // get metadata even the images are not fully generated
+    let metadata = Image.statsSync(src, options);
     return Image.generateHTML(metadata, imageAttributes);
 }
 
@@ -22,9 +27,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('src/assets/');
 
-    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+    eleventyConfig.addNunjucksShortcode('image', imageShortcode);
 
     return {
+        markdownTemplateEngine: 'njk',
         dir: {
             input: 'src',
             output: 'public',

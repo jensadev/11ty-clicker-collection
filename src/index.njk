@@ -2,21 +2,17 @@
 layout: base.njk
 title: Clicker samling
 ---
-
+{% set url  = "" %}
 {% for class in clickers %}
 <h2>{{ class.class }}</h2>
-<ul>
     {% for clicker in class.clickers %}
-    <li>
-        {% set thumbnail = clicker.thumbnail %}
-        {% set alt = clicker.title %}
-        {{ thumbnail }}
+    {% set url = ["./src/previews/", clicker.image] | join %}
+    <div class="card">
+        {% image url, "test", "10vw" %}
         <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
         <p>Skapad av: {{ clicker.author }}</p>
         <p>Koden: {{ clicker.github | safe}}</p>
         <p>{{ clicker.tagline }}</p>
-    </li>
+    </div>
     {% endfor %}
-</ul>
 {% endfor %}
-
