@@ -1,11 +1,22 @@
 ---
 layout: base.njk
-title: 11ty + Sass Design System
+title: Clicker samling
 ---
 
+{% for class in clickers %}
+<h2>{{ class.class }}</h2>
 <ul>
-{% for page in collections.docs %}
-    <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
-{% endfor %}
+    {% for clicker in class.clickers %}
+    <li>
+        {% set thumbnail = clicker.thumbnail %}
+        {% set alt = clicker.title %}
+        {{ thumbnail }}
+        <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
+        <p>Skapad av: {{ clicker.author }}</p>
+        <p>Koden: {{ clicker.github | safe}}</p>
+        <p>{{ clicker.tagline }}</p>
+    </li>
+    {% endfor %}
 </ul>
+{% endfor %}
 
