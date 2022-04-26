@@ -2,7 +2,8 @@
 layout: base.njk
 title: Clickersamling
 ---
-{% set url  = "" %}
+
+{% set url = "" %}
 {% for class in clickers %}
 <h2>{{ class.class }}</h2>
 <div class="card-group">
@@ -13,20 +14,36 @@ title: Clickersamling
         <div class="card__content">
             <div class="card__header">
                 <h3 class="card__title">
-                    <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
+                    <a href="{{ clicker.url | safe }}" target="_blank">{{
+                        clicker.title
+                    }}</a>
                 </h3>
                 {% if clicker.author %}
-                    <p>Skapad av: {{ clicker.author }}</p>
+                <p>Skapad av: {{ clicker.author }}</p>
                 {% endif %}
             </div>
             {% if clicker.tagline %}
-                <p>{{ clicker.tagline }}</p>
+            <p>{{ clicker.tagline }}</p>
             {% endif %}
             {% if clicker.git %}
-                <p class="card__footer"><a href="{{ clicker.git | safe}}">Koden på Git</a></p>
+            <p class="card__footer">
+                <a href="{{ clicker.git | safe }}">Koden på Git</a>
+            </p>
             {% endif %}
         </div>
     </div>
     {% endfor %}
 </div>
 {% endfor %}
+<footer class="container mbs mbe">
+    <p>
+        Den här sidan innehåller elevarbeten från kursen Webbutveckling 1 på
+        <a href="https://www.ntigymnasiet.se/umea/">NTIGymnasiet Umeå</a>.
+    </p>
+    <p>
+        Sidan är skapad av
+        <a href="https://github.com/jensnti">Jens Andreasson</a>, koden finns på
+        <a href="https://github.com/jensnti/11ty-clicker-collection">GitHub</a>
+        och sidan är hostad på <a href="https://www.netlify.com/">Netlify</a>.
+    </p>
+</footer>
