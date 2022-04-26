@@ -23,7 +23,8 @@ const urls = [
     'https://lekzy2.github.io/Poto-clicker/',
     'https://lukas-johansson.github.io/Progamerclickerpoggers/',
     'https://rallve.github.io/wu1-clicker/',
-    'https://eh2o.github.io/clickergame/'
+    'https://eh2o.github.io/clickergame/',
+    'https://nizardawood.github.io/Clicker/'
 ];
 
 const previewPath = './src/previews';

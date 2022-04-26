@@ -15,27 +15,23 @@ $color-on-dark: rgb(136, 136, 136) !default;
 $base-color-tokens: ("primary", "secondary", "light", "dark");
 
 $color-tokens: (
-    "color-primary": $color-primary,
-    "color-on-primary": $color-on-primary,
-    "color-secondary": $color-secondary,
-    "color-on-secondary": $color-on-secondary,
-    "color-light": $color-light,
-    "color-on-light": $color-on-light,
-    "color-dark": $color-dark,
-    "color-on-dark": $color-on-dark,
-    "color-background": $color-light,
-    "color-foreground": $color-dark,
+  "color-primary": $color-primary,
+  "color-on-primary": $color-on-primary,
+  "color-secondary": $color-secondary,
+  "color-on-secondary": $color-on-secondary,
+  "color-light": $color-light,
+  "color-on-light": $color-on-light,
+  "color-dark": $color-dark,
+  "color-on-dark": $color-on-dark
 ) !default;
 
 @mixin color-tokens() {
-    --color-primary: #{$color-primary};
-    --color-on-primary: #{$color-on-primary};
-    --color-secondary: #{$color-secondary};
-    --color-on-secondary: #{$color-on-secondary};
-    --color-light: #{$color-light};
-    --color-on-light: #{$color-on-light};
-    --color-dark: #{$color-dark};
-    --color-on-dark: #{$color-on-dark};
-    --color-background: #{$color-light};
-    --color-foreground: #{$color-dark};
+  --color-primary: #{$color-primary};
+  --color-on-primary: #{$color-on-primary};
+  --color-secondary: #{$color-secondary};
+  --color-on-secondary: #{$color-on-secondary};
+  --color-light: #{$color-light};
+  --color-on-light: #{$color-on-light};
+  --color-dark: #{$color-dark};
+  --color-on-dark: #{$color-on-dark};
 }
