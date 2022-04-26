@@ -71,3 +71,9 @@ $card-border-radius: ".75rem" !default;
         }
     }
 }
+
+.card-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+}

@@ -5,14 +5,26 @@ title: Clicker samling
 {% set url  = "" %}
 {% for class in clickers %}
 <h2>{{ class.class }}</h2>
-    {% for clicker in class.clickers %}
+<div class="card-group">
+    {% for clicker in class.clickers | randomize %}
     {% set url = ["./src/previews/", clicker.image] | join %}
     <div class="card">
-        {% image url, "test", "10vw" %}
-        <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
-        <p>Skapad av: {{ clicker.author }}</p>
-        <p>Koden: {{ clicker.github | safe}}</p>
-        <p>{{ clicker.tagline }}</p>
+        {% image url, "test" %}
+        <div class="card__content">
+            <h3 class="card__title">
+                <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
+            </h3>
+            {% if clicker.author %}
+                <p>Kodad av: {{ clicker.author }}</p>
+            {% endif %}
+            {% if clicker.tagline %}
+                <p>{{ clicker.tagline }}</p>
+            {% endif %}
+            {% if clicker.git %}
+                <p>Koden på <a href="{{ clicker.git | safe}}">Git</a></p>
+            {% endif %}
+        </div>
     </div>
     {% endfor %}
+</div>
 {% endfor %}

@@ -2,8 +2,8 @@ const Image = require('@11ty/eleventy-img');
 
 function imageShortcode(src, alt, sizes) {
     let options = {
-        widths: [300, 600],
-        formats: ['png'],
+        widths: [300],
+        formats: ['avif', 'webp', 'png'],
         outputDir: './public/assets/',
         urlPath: '/assets/',
     };
@@ -22,12 +22,20 @@ function imageShortcode(src, alt, sizes) {
     return Image.generateHTML(metadata, imageAttributes);
 }
 
+const randomize = (arr) => {
+    return arr.sort(() => {
+      return 0.5 - Math.random();
+    });
+};
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/sass/');
 
     eleventyConfig.addPassthroughCopy('src/assets/');
 
     eleventyConfig.addNunjucksShortcode('image', imageShortcode);
+
+    eleventyConfig.addFilter('randomize', randomize);
 
     return {
         markdownTemplateEngine: 'njk',
