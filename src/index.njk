@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Clicker samling
+title: Clickersamling
 ---
 {% set url  = "" %}
 {% for class in clickers %}
@@ -11,17 +11,19 @@ title: Clicker samling
     <div class="card">
         {% image url, "test" %}
         <div class="card__content">
-            <h3 class="card__title">
-                <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
-            </h3>
-            {% if clicker.author %}
-                <p>Kodad av: {{ clicker.author }}</p>
-            {% endif %}
+            <div class="card__header">
+                <h3 class="card__title">
+                    <a href="{{ clicker.url | safe }}" target="_blank">{{ clicker.title }}</a>
+                </h3>
+                {% if clicker.author %}
+                    <p>Skapad av: {{ clicker.author }}</p>
+                {% endif %}
+            </div>
             {% if clicker.tagline %}
                 <p>{{ clicker.tagline }}</p>
             {% endif %}
             {% if clicker.git %}
-                <p>Koden på <a href="{{ clicker.git | safe}}">Git</a></p>
+                <p class="card__footer"><a href="{{ clicker.git | safe}}">Koden på Git</a></p>
             {% endif %}
         </div>
     </div>

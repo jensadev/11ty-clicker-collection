@@ -3,5 +3,6 @@
 @use "components";
 
 body {
-    background-color: #f9f9f9;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
 }

@@ -116,7 +116,7 @@ module.exports = [
                 image: 'b0dc744bd18f1d81f644548c29777dc1.png',
             },
             {
-                title: 'Lycas clicker',
+                title: 'Lucas clicker',
                 tagline: '',
                 url: 'https://rallve.github.io/wu1-clicker/',
                 git: '',

@@ -10,32 +10,32 @@ title: Color Token Contrast
 
 ## color-on-primary
   - `color-primary`
-  - `color-hover-primary`
-  - `color-text`
+  - `color-on-secondary`
+  - `color-dark`
 
-## color-hover-primary
+## color-secondary
+  - `color-on-secondary`
+
+## color-on-secondary
   - `color-on-primary`
-  - `color-on-hover-primary`
+  - `color-secondary`
   - `color-light`
-
-## color-on-hover-primary
-  - `color-hover-primary`
-  - `color-text`
-
-## color-text
-  - `color-on-primary`
-  - `color-on-hover-primary`
-  - `color-on-text`
-  - `color-light`
-
-## color-on-text
-  - `color-text`
+  - `color-on-dark`
 
 ## color-light
   - `color-primary`
-  - `color-hover-primary`
-  - `color-text`
+  - `color-on-secondary`
   - `color-on-light`
+  - `color-dark`
 
 ## color-on-light
   - `color-light`
+
+## color-dark
+  - `color-on-primary`
+  - `color-light`
+  - `color-on-dark`
+
+## color-on-dark
+  - `color-on-secondary`
+  - `color-dark`

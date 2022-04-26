@@ -1,5 +1,7 @@
 @use "color-tokens" as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap');
+
 :root {
     @include color-tokens;
     --shadow-color: 0deg 0% 0%;

@@ -4,18 +4,18 @@ const Color = require("color");
 module.exports = [
     {
       name: "primary",
-      color: "#4363e9",
+      color: "hsl(275, 100%, 25%)",
     },
     {
-        name: "hover-primary",
-        color: Color('#4363e9').darken(0.1).hex(),
-      },
-    {
-        name: "text",
-        color: "#424242",
+        name: "secondary",
+        color: "hsl(347, 83%, 56%)",
     },
     {
         name: "light",
-        color: "#fff",
+        color: "hsl(0, 0%, 94%)",
     },
+    {
+        name: "dark",
+        color: "hsl(0, 0%, 13%)"
+    }
   ];

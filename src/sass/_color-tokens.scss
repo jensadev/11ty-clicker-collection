@@ -3,35 +3,39 @@
   Modify colors in src/_data/colorTokens.js
  */
 
-$color-primary: #4363e9 !default;
-$color-on-primary: #EFF3FF !default;
-$color-hover-primary: #284DE6 !default;
-$color-on-hover-primary: #CCD8FF !default;
-$color-text: #424242 !default;
-$color-on-text: #AEAEAE !default;
-$color-light: #fff !default;
-$color-on-light: #767676 !default;
+$color-primary: hsl(275, 100%, 25%) !default;
+$color-on-primary: hsl(274.29999999999995, 51.9%, 68.2%) !default;
+$color-secondary: hsl(347, 83%, 56%) !default;
+$color-on-secondary: hsl(349.4, 100%, 10%) !default;
+$color-light: hsl(0, 0%, 94%) !default;
+$color-on-light: rgb(109, 109, 109) !default;
+$color-dark: hsl(0, 0%, 13%) !default;
+$color-on-dark: rgb(136, 136, 136) !default;
 
-$base-color-tokens: ("primary", "hover-primary", "text", "light");
+$base-color-tokens: ("primary", "secondary", "light", "dark");
 
 $color-tokens: (
-  "color-primary": $color-primary,
-  "color-on-primary": $color-on-primary,
-  "color-hover-primary": $color-hover-primary,
-  "color-on-hover-primary": $color-on-hover-primary,
-  "color-text": $color-text,
-  "color-on-text": $color-on-text,
-  "color-light": $color-light,
-  "color-on-light": $color-on-light
+    "color-primary": $color-primary,
+    "color-on-primary": $color-on-primary,
+    "color-secondary": $color-secondary,
+    "color-on-secondary": $color-on-secondary,
+    "color-light": $color-light,
+    "color-on-light": $color-on-light,
+    "color-dark": $color-dark,
+    "color-on-dark": $color-on-dark,
+    "color-background": $color-light,
+    "color-foreground": $color-dark,
 ) !default;
 
 @mixin color-tokens() {
-  --color-primary: #{$color-primary};
-  --color-on-primary: #{$color-on-primary};
-  --color-hover-primary: #{$color-hover-primary};
-  --color-on-hover-primary: #{$color-on-hover-primary};
-  --color-text: #{$color-text};
-  --color-on-text: #{$color-on-text};
-  --color-light: #{$color-light};
-  --color-on-light: #{$color-on-light};
+    --color-primary: #{$color-primary};
+    --color-on-primary: #{$color-on-primary};
+    --color-secondary: #{$color-secondary};
+    --color-on-secondary: #{$color-on-secondary};
+    --color-light: #{$color-light};
+    --color-on-light: #{$color-on-light};
+    --color-dark: #{$color-dark};
+    --color-on-dark: #{$color-on-dark};
+    --color-background: #{$color-light};
+    --color-foreground: #{$color-dark};
 }
