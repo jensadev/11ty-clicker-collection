@@ -1,5 +1,51 @@
 module.exports = [
     {
+        class: 'te21',
+        clickers: [
+            {
+                title: 'Lyssnaren',
+                tagline:
+                    'En klicker där du aldrig är säker om det är spelet eller rösterna',
+                url: 'https://alfredengberg.github.io/wu1-clicker-voices/',
+                git: 'https://github.com/AlfredEngberg/wu1-clicker-voices',
+                author: 'Alfred Engberg',
+                image: '',
+            },
+            {
+                title: 'Pizzabaker clicker',
+                tagline: 'Baka Feta smarriga Pizzor kom in!!!!',
+                url: 'https://endaxe.github.io/wu1-clicker/',
+                git: 'https://github.com/Endaxe/wu1-clicker',
+                author: 'Endo',
+                image: '',
+            },
+            {
+                title: 'Restaurang Clicker',
+                tagline: 'Skapa din egna dröm restaurang!',
+                url: 'https://gabbe16.github.io/wu1-clicker/',
+                git: 'https://github.com/Gabbe16/wu1-clicker',
+                author: 'Gabriel Nilsson Högberg',
+                image: '',
+            },
+            {
+                title: 'Cat Clicker',
+                tagline: 'The most fun you can have online',
+                url: 'https://jacobtwentyone.github.io/wu1-clicker/',
+                git: 'https://github.com/JacobTwentyOne/wu1-clicker',
+                author: 'JacobLJ',
+                image: '',
+            },
+            {
+                title: 'Monsterslayer',
+                tagline: '',
+                url: 'https://mephit299.github.io/wu1-clicker/',
+                git: 'https://github.com/Mephit299/wu1-clicker',
+                autor: 'Levi',
+                image: '',
+            },
+        ],
+    },
+    {
         class: 'te20',
         clickers: [
             {
@@ -117,7 +163,8 @@ module.exports = [
             },
             {
                 title: 'Legend of Fantasia',
-                tagline: 'Fight dangerous foes, gain XP and become the most powerful being in the legendary land of Fantasia!',
+                tagline:
+                    'Fight dangerous foes, gain XP and become the most powerful being in the legendary land of Fantasia!',
                 url: 'https://rallve.github.io/wu1-clicker/',
                 git: 'https://github.com/Rallve/wu1-clicker',
                 author: 'Lucas',
