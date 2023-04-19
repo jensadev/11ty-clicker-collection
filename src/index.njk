@@ -3,9 +3,21 @@ layout: base.njk
 title: Clickersamling
 ---
 
+<div class="flow">
+    <p class="lead">I kursen Webbutveckling 1 på teknikprogrammet <a target="_blank"
+            href="https://www.ntigymnasiet.se/umea/">NTIGymnasiet Umeå</a> så skapar eleverna en <a target="_blank"
+            href="https://en.wikipedia.org/wiki/Incremental_game">clicker</a>.
+        Projektet är en övning i att använda och förstå Javascript tillsammans med HTML och CSS.</p>
+    <p class="lead">Eleverna får forka <a target="_blank" href="https://github.com/jensnti/wu1-clicker">startkod</a>
+        från GitHub för att sedan låta
+        kreativiteten
+        flöda fritt.</p>
+    <p class="lead">Välkommen att testa våra clickers!</p>
+</div>
+
 {% set url = "" %}
 {% for class in clickers %}
-<h2>{{ class.class }}</h2>
+<h2 class="mbs">{{ class.class }}</h2>
 <div class="card-group">
     {% for clicker in class.clickers | randomize %}
     {% set url = ["./src/previews/", clicker.image] | join %}
@@ -16,7 +28,7 @@ title: Clickersamling
                 <h3 class="card__title">
                     <a href="{{ clicker.url | safe }}" target="_blank">{{
                         clicker.title
-                    }}</a>
+                        }}</a>
                 </h3>
                 {% if clicker.author %}
                 <p>Skapad av: {{ clicker.author }}</p>

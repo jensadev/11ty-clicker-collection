@@ -1,9 +1,10 @@
-@forward "reset";
-@forward "links";
-@forward "colors";
-$sans-serif: "Work Sans", sans-serif;
-@forward "typography" with (
+@forward 'reset';
+@forward 'links';
+@forward 'colors';
+$sans-serif: 'Work Sans', sans-serif;
+@forward 'typography' with (
     $font-weight-bold: 700,
     $font-family-headlines: $sans-serif
-    );
-@forward "layout";
+);
+@forward 'layout';
+@forward 'flow';
