@@ -58,7 +58,15 @@ module.exports = [
                 git: 'https://github.com/Pissoarsniffare/wu1-clicker',
                 author: 'Samuel Viglundsson',
                 image: '49ffada58852c7e063631de4adc56205.png'
-            }
+            },
+            {
+                title: 'Shroom Farmer',
+                tagline: 'Du farmar en massa fantastiska svampar',
+                url: 'https://nonsensicalquagga.github.io/wu1-clicker/',
+                git: 'https://github.com/NonsensicalQuagga/wu1-clicker',
+                author: 'Alvin',
+                image: 'a98766f6aa9ca7da4783ef5dc11b46fb.png'
+            },
         ],
     },
     {
