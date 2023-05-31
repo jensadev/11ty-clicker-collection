@@ -43,6 +43,22 @@ module.exports = [
                 author: 'Levi',
                 image: 'eb051bc223e3f1f7b9a3642967c67383.png',
             },
+            {
+                title: 'Potion Clicker',
+                tagline: 'Brew potions and enjoy their effects while earning big off of em',
+                url: 'https://l1nu5-21.github.io/wu1-clicker/',
+                git: 'https://github.com/L1nu5-21/wu1-clicker',
+                author: 'Linus',
+                image: '6efa3656b5265b1689d450d5b8061a6b.png',
+            },
+            {
+                title: 'Semla Clicker',
+                tagline: 'Baka semlor och bli semmelmästare',
+                url: 'https://pissoarsniffare.github.io/wu1-clicker/',
+                git: 'https://github.com/Pissoarsniffare/wu1-clicker',
+                author: 'Samuel Viglundsson',
+                image: '49ffada58852c7e063631de4adc56205.png'
+            }
         ],
     },
     {
